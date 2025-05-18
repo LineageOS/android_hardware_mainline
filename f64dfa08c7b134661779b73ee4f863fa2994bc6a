@@ -36,6 +36,23 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1804820c_7fb12d57",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-05-18T21:52:20Z",
+      "side": 1,
+      "message": "okay I\u0027ll ask upstream about these, and will cherry-pick the commits to import instead.\n\nbtw, even if we have to do the changes, I\u0027d prefer doing it in later commits, not the one importing it",
+      "revId": "f64dfa08c7b134661779b73ee4f863fa2994bc6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "218655c7_d9bc8dfc",
