@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "106e028d_833170c5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2025-05-18T21:08:17Z",
+      "side": 1,
+      "message": "This kind of imports deserves authorship",
+      "revId": "f64dfa08c7b134661779b73ee4f863fa2994bc6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "218655c7_d9bc8dfc",
+        "filename": "vibrator/glodroid/.clang-format",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2025-05-18T21:08:17Z",
+      "side": 1,
+      "message": "- Should be a symlink to Google one\n- Keep it in repo root",
+      "revId": "f64dfa08c7b134661779b73ee4f863fa2994bc6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "445e31ca_5aab4a37",
+        "filename": "vibrator/glodroid/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2025-05-18T21:08:17Z",
+      "side": 1,
+      "message": "Ask upstream to add license header",
+      "revId": "f64dfa08c7b134661779b73ee4f863fa2994bc6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "87240eb1_762edfb2",
+        "filename": "vibrator/glodroid/FFDevice.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2025-05-18T21:08:17Z",
+      "side": 1,
+      "message": "Ask upstream to fix format and use proper SPDX format?",
+      "revId": "f64dfa08c7b134661779b73ee4f863fa2994bc6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e0a3d807_ceb3aa7d",
+        "filename": "vibrator/glodroid/FFDevice.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2025-05-18T21:08:17Z",
+      "side": 1,
+      "message": "...C funcs on C++? `std::filesystem` exists",
+      "revId": "f64dfa08c7b134661779b73ee4f863fa2994bc6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
