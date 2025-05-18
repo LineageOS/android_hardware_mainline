@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "24d0ac74_7a2cf608",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2025-05-18T21:19:43Z",
+      "side": 1,
+      "message": "It has just two commits, you can just cherry-pick them",
+      "parentUuid": "106e028d_833170c5",
+      "revId": "f64dfa08c7b134661779b73ee4f863fa2994bc6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "218655c7_d9bc8dfc",
         "filename": "vibrator/glodroid/.clang-format",
         "patchSetId": 1
