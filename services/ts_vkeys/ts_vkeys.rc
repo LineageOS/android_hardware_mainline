@@ -1,0 +1,9 @@
+service vendor.ts_vkeys /vendor/bin/ts_vkeys
+    class main
+    user uhid
+    group uhid input
+    oneshot
+    disabled
+
+on property:vendor.ts_vkeys.names=*
+    enable vendor.ts_vkeys

@@ -1,0 +1,29 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_defaults {
+    name: "ts_vkeys_defaults",
+    srcs: [
+        "ts_vkeys.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+    ],
+}
+
+cc_binary {
+    name: "ts_vkeys",
+    defaults: ["ts_vkeys_defaults"],
+    init_rc: ["ts_vkeys.rc"],
+    vendor: true,
+}
+
+cc_binary {
+    name: "ts_vkeys_recovery",
+    stem: "ts_vkeys",
+    defaults: ["ts_vkeys_defaults"],
+    init_rc: ["ts_vkeys.recovery.rc"],
+    recovery: true,
+}
