@@ -1,0 +1,4 @@
+service vendor.ts_vkeys /vendor/bin/ts_vkeys
+    class main
+    user uhid
+    group uhid input
