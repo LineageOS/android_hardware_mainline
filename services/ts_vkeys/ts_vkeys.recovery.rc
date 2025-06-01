@@ -1,0 +1,5 @@
+service ts_vkeys /system/bin/ts_vkeys
+    user uhid
+    group uhid input
+    seclabel u:r:ts_vkeys:s0
+    oneshot
