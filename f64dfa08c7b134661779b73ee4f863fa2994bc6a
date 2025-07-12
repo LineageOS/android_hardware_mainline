@@ -53,6 +53,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "90422b1b_da92b887",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-07-12T09:06:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "24d0ac74_7a2cf608",
+      "revId": "f64dfa08c7b134661779b73ee4f863fa2994bc6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "218655c7_d9bc8dfc",
@@ -66,6 +84,24 @@
       "writtenOn": "2025-05-18T21:08:17Z",
       "side": 1,
       "message": "- Should be a symlink to Google one\n- Keep it in repo root",
+      "revId": "f64dfa08c7b134661779b73ee4f863fa2994bc6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d3a4913_d01c7ae5",
+        "filename": "vibrator/glodroid/.clang-format",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-07-12T09:06:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "218655c7_d9bc8dfc",
       "revId": "f64dfa08c7b134661779b73ee4f863fa2994bc6a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -87,6 +123,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9489ba78_035166d6",
+        "filename": "vibrator/glodroid/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-07-12T09:06:58Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "445e31ca_5aab4a37",
+      "revId": "f64dfa08c7b134661779b73ee4f863fa2994bc6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "87240eb1_762edfb2",
@@ -104,6 +158,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b7ad22d_ff8ebad6",
+        "filename": "vibrator/glodroid/FFDevice.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-07-12T09:06:58Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "87240eb1_762edfb2",
+      "revId": "f64dfa08c7b134661779b73ee4f863fa2994bc6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e0a3d807_ceb3aa7d",
@@ -117,6 +189,24 @@
       "writtenOn": "2025-05-18T21:08:17Z",
       "side": 1,
       "message": "...C funcs on C++? `std::filesystem` exists",
+      "revId": "f64dfa08c7b134661779b73ee4f863fa2994bc6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7c351cf_3a36251d",
+        "filename": "vibrator/glodroid/FFDevice.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-07-12T09:06:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e0a3d807_ceb3aa7d",
       "revId": "f64dfa08c7b134661779b73ee4f863fa2994bc6a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
