@@ -16,13 +16,12 @@ cc_library_static {
         "//hardware/interfaces/tests/extension/vibrator:__subpackages__",
         ":__subpackages__",
     ],
+    installable: false,
 }
 
 cc_binary {
     name: "android.hardware.vibrator-service.glodroid",
     relative_install_path: "hw",
-    init_rc: ["vibrator-glodroid.rc"],
-    vintf_fragments: ["vibrator-glodroid.xml"],
     vendor: true,
     shared_libs: [
         "android.hardware.vibrator-V2-ndk",
@@ -33,4 +32,36 @@ cc_binary {
         "libvibratorglodroidimpl",
     ],
     srcs: ["main.cpp"],
+    installable: false,
+}
+
+prebuilt_etc {
+    name: "vibrator-glodroid.rc",
+    src: "vibrator-glodroid.rc",
+    installable: false,
+}
+
+prebuilt_etc {
+    name: "vibrator-glodroid.xml",
+    src: "vibrator-glodroid.xml",
+    sub_dir: "vintf",
+    installable: false,
+}
+
+apex {
+    name: "com.android.hardware.vibrator.glodroid",
+    manifest: "manifest.json",
+    file_contexts: "file_contexts",
+    key: "com.android.hardware.key",
+    certificate: ":com.android.hardware.certificate",
+    updatable: false,
+    vendor: true,
+
+    binaries: [
+        "android.hardware.vibrator-service.glodroid",
+    ],
+    prebuilts: [
+        "vibrator-glodroid.rc",
+        "vibrator-glodroid.xml",
+    ],
 }
