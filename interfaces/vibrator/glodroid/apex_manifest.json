@@ -1,5 +1,5 @@
 {
-    "name": "com.android.hardware.vibrator.glodroid",
+    "name": "com.android.hardware.vibrator",
     "supportsRebootlessUpdate": true,
     "version": 1
 }
