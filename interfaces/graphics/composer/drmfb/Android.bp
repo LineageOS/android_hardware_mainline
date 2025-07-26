@@ -6,6 +6,7 @@ cc_binary {
     relative_install_path: "hw",
     vendor: true,
     init_rc: ["android.hardware.graphics.composer@2.1-service.drmfb.rc"],
+    vintf_fragments: ["android.hardware.graphics.composer@2.1-service.drmfb.xml"],
 
     srcs: [
         "DrmComposer.cpp",
