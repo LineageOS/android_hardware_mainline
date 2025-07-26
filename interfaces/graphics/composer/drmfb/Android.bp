@@ -6,7 +6,10 @@ cc_binary {
     relative_install_path: "hw",
     vendor: true,
     init_rc: ["android.hardware.graphics.composer@2.1-service.drmfb.rc"],
-    vintf_fragments: ["android.hardware.graphics.composer@2.1-service.drmfb.xml"],
+    vintf_fragments: select(soong_config_variable("drmfb_composer", "include_vintf_fragments"), {
+        false: [],
+        default: ["android.hardware.graphics.composer@2.1-service.drmfb.xml"],
+    }),
 
     srcs: [
         "DrmComposer.cpp",
