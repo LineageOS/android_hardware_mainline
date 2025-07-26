@@ -9,8 +9,12 @@
 #include <xf86drmMode.h>
 
 #include <cros_gralloc_handle.h>
-#include <cros_gralloc_helpers.h>
 #include "DrmFramebufferImporter.h"
+
+// From cros_gralloc_helpers.h:
+constexpr uint32_t cros_gralloc_magic = 0xABCDDCBA;
+constexpr uint32_t handle_data_size =
+    ((sizeof(struct cros_gralloc_handle) - offsetof(cros_gralloc_handle, fds[0])) / sizeof(int));
 
 namespace android {
 namespace hardware {

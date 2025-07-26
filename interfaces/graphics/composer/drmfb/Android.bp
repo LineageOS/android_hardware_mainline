@@ -55,8 +55,5 @@ cc_binary {
         "liblog",
         "libsync",
         "libutils",
-    ] + select(soong_config_variable("drmfb_composer", "uses_minigbm"), {
-        true: ["libnativewindow"], // TODO: Remove
-        default: [],
-    }),
+    ],
 }
