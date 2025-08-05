@@ -33,13 +33,22 @@ void DrmVsyncThread::run() {
         .sequence = 1,
     }};
 
-    auto ret = drmWaitVBlank(mDisplay.device().fd(), &vBlank);
-    if (ret) {
-        PLOG(ERROR) << "drmWaitBlank failed";
-        if (errno == EBUSY || waitFallback())
-            return;
+    if (mGotErrnoEopnotsupp) {
+        waitFallback();
     } else {
-        mTimestamp = vBlank.reply.tval_sec * NANO + vBlank.reply.tval_usec * 1000;
+        auto ret = drmWaitVBlank(mDisplay.device().fd(), &vBlank);
+        if (ret) {
+            if (errno == EOPNOTSUPP) {
+                mGotErrnoEopnotsupp = true;
+                waitFallback();
+            } else {
+                PLOG(ERROR) << "drmWaitBlank failed";
+                if (errno == EBUSY || waitFallback())
+                    return;
+            }
+        } else {
+            mTimestamp = vBlank.reply.tval_sec * NANO + vBlank.reply.tval_usec * 1000;
+        }
     }
 
     mDisplay.vsync(mTimestamp);

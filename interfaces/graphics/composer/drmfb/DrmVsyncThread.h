@@ -25,6 +25,7 @@ private:
 
     DrmDisplay& mDisplay;
     int64_t mTimestamp = 0;
+    bool mGotErrnoEopnotsupp = false;
 };
 
 }  // namespace drmfb
