@@ -1,0 +1,19 @@
+cc_library {
+    name: "libgrub_boot_control",
+    srcs: [
+        "GrubBootControl.cpp",
+        "GrubBootControlUtil.cpp",
+    ],
+    export_include_dirs: ["include"],
+    shared_libs: [
+        "libbase",
+        "libgrub_editenv",
+    ],
+    host_supported: true,
+    recovery_available: true,
+    vendor: true,
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.hardware.boot.grub",
+    ],
+}

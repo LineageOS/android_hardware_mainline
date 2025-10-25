@@ -1,0 +1,22 @@
+cc_binary {
+    name: "grub_boot_control",
+    srcs: ["grub_boot_control.cpp"],
+    shared_libs: [
+        "libbase",
+        "libgrub_boot_control",
+        "libgrub_editenv",
+    ],
+    target: {
+        host: {
+            static_libs: [
+                "liblog_stub",
+            ],
+        },
+    },
+    host_supported: true,
+    recovery_available: true,
+    vendor: true,
+    apex_available: [
+        "//apex_available:platform",
+    ],
+}
