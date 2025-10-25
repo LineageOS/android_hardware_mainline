@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7aa982f0_b5d76599",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-10-25T15:43:03Z",
+      "side": 1,
+      "message": "yeah, the code might be not perfect as is, but this is a Import commit, and we could optimize things later",
+      "revId": "4c83f739b6542a84bf8f97e0cc58e1e4402b5a4c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
