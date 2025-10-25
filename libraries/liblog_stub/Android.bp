@@ -1,0 +1,7 @@
+cc_library {
+    name: "liblog_stub",
+    srcs: ["liblog_stub.cpp"],
+    include_dirs: ["system/logging/liblog/include"],
+    host_supported: true,
+    vendor: true,
+}
