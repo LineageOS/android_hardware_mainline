@@ -10,13 +10,6 @@ cc_binary {
         "libbase",
         "libgrub_editenv",
     ],
-    target: {
-        host: {
-            static_libs: [
-                "liblog_stub",
-            ],
-        },
-    },
     host_supported: true,
     recovery_available: true,
     vendor: true,
