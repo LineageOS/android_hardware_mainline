@@ -11,4 +11,7 @@ service vendor.dlkm_loader_mainline /vendor/bin/dlkm_loader_mainline
     oneshot
 
 on early-init
+    # Use ueventd to load firmware
+    write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
+
     start vendor.dlkm_loader_mainline
