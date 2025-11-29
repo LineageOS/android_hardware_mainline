@@ -1,0 +1,14 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+service vendor.dlkm_loader_mainline /vendor/bin/dlkm_loader_mainline
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on early-init
+    start vendor.dlkm_loader_mainline
