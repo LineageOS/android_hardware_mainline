@@ -1,0 +1,23 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+cc_binary {
+    name: "dlkm_loader_mainline",
+    init_rc: ["dlkm_loader_mainline.rc"],
+    srcs: [
+        "dlkm_loader_mainline.cpp",
+    ],
+    static_libs: [
+        "libbase",
+        "libmodprobe",
+    ],
+    shared_libs: [
+        "liblog",
+    ],
+}
