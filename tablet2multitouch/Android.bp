@@ -1,0 +1,39 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library {
+    name: "libtablet2multitouch",
+    srcs: ["libtablet2multitouch.c"],
+    export_include_dirs: ["include"],
+    shared_libs: ["libcutils"],
+    recovery_available: true,
+    vendor: true,
+}
+
+cc_defaults {
+    name: "tablet2multitouch_defaults",
+    srcs: [
+        "tablet2multitouch.c",
+    ],
+    shared_libs: [
+        "libcutils",
+        "libtablet2multitouch",
+    ],
+}
+
+cc_binary {
+    name: "tablet2multitouch",
+    defaults: ["tablet2multitouch_defaults"],
+    init_rc: ["tablet2multitouch.rc"],
+    vendor: true,
+}
+
+cc_binary {
+    name: "tablet2multitouch_recovery",
+    stem: "tablet2multitouch",
+    defaults: ["tablet2multitouch_defaults"],
+    init_rc: ["tablet2multitouch.recovery.rc"],
+    recovery: true,
+}
