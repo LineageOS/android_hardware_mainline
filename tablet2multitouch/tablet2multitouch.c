@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#include <cutils/properties.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <linux/input.h>
@@ -26,15 +27,15 @@
 #define LOG_INFO(...) KLOG_INFO(LOG_TAG, __VA_ARGS__)
 #endif
 
+#define DEVICE_NAMES_PROP "vendor.tablet2multitouch.device_names"
+#define DEVICE_NAMES_DELIMITER ","
+
 #define BITS_PER_LONG (sizeof(unsigned long) * 8)
 #define BITS_TO_LONGS(bits) (((bits) + BITS_PER_LONG - 1) / BITS_PER_LONG)
 
 static bool test_bit(size_t bit, unsigned long* array) {
     return (array[bit / BITS_PER_LONG] & (1UL << (bit % BITS_PER_LONG))) != 0;
 }
-
-static const char* device_names[] = {"QEMU QEMU USB Tablet", "QEMU Virtio Tablet",
-                                     "VirtualPS/2 VMware VMMouse"};
 
 static const struct uinput_setup usetup = {
         .id =
@@ -48,7 +49,8 @@ static const struct uinput_setup usetup = {
 
 int main() {
     bool device_name_matched = false;
-    char buf[64];
+    char buf[64], device_names[128];
+    char* device_names_token = NULL;
     int fd, epoll_fd, uinput_fd;
     struct input_absinfo abs_x_info, abs_y_info;
     struct input_event ev;
@@ -56,7 +58,7 @@ int main() {
     unsigned long ev_bits[BITS_TO_LONGS(EV_MAX)];
 
     // Find the source input device
-    for (int i = 0; i < 10; ++i) {
+    for (int i = 0; i < 32; ++i) {
         device_name_matched = false;
         memset(ev_bits, 0, sizeof(ev_bits));
 
@@ -65,11 +67,18 @@ int main() {
         if (fd < 0) continue;
 
         ioctl(fd, EVIOCGNAME(sizeof(buf)), buf);
-        for (int j = 0; j < sizeof(device_names) / sizeof(device_names[0]); ++j) {
-            if (strcmp(buf, device_names[j]) == 0) {
-                device_name_matched = true;
-                break;
-            }
+        if (property_get(DEVICE_NAMES_PROP, device_names, "") > 0) {
+            do {
+                device_names_token = strtok(device_names, DEVICE_NAMES_DELIMITER);
+                if (!strcmp(device_names_token, buf)) {
+                    device_name_matched = true;
+                    break;
+                }
+            } while (device_names_token != NULL)
+        } else {
+            LOG_ERROR("Device names property not defined\n");
+            close(fd);
+            break;
         }
 
         if (!device_name_matched) {
