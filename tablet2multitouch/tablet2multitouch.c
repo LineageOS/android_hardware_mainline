@@ -41,9 +41,9 @@ static const struct uinput_setup usetup = {
                 {
                         .bustype = BUS_VIRTUAL,
                         .vendor = 0xCAFE,
-                        .product = 0x7100,
+                        .product = 0x0001,
                 },
-        .name = "virt-tablet2multitouch",
+        .name = "tablet2multitouch",
 };
 
 int main() {
