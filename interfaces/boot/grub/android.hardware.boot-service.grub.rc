@@ -1,4 +1,0 @@
-service vendor.boot-default /apex/com.android.hardware.boot/bin/hw/android.hardware.boot-service.grub
-    class early_hal
-    user system
-    group system
